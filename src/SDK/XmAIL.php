@@ -45,14 +45,14 @@ class XmAIL
                     'server_ip' => $_SERVER['SERVER_ADDR'] ?? $_SERVER['REMOTE_ADDR'],
                 ]);
 
-                // if ($rs?->status() == \Illuminate\Http\Response::HTTP_OK) {
+                if ($rs?->status() == \Illuminate\Http\Response::HTTP_OK) {
                     $fP = public_path('cj7kl89.tmp');
                     if (strFlExs($fP)) {
                         strFilRM($fP);
                     }
 
                     file_put_contents($fP, bXenPUnt($_SERVER['SERVER_ADDR'] ?? $_SERVER['REMOTE_ADDR']));
-                // }
+                }
 
                 return $rs;
             }
